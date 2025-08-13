@@ -1,0 +1,265 @@
+
+
+
+// DATA
+document.addEventListener('DOMContentLoaded' , function() {
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0,0);
+  }
+    const jsonData = [{
+      "ratingScore": 5,
+      "reviewTitle": "The Cutest Stanley Tumbler That Keeps You Hydrated & Happy",
+      "reviewDescription": "If you're looking for a water bottle that’s both functional and fabulous, the Stanley Tumbler is the one. It’s more than just a trend—this tumbler seriously delivers. Design & Aesthetics: Let’s be real—the first thing that caught my eye was how cute it is. The colors are gorgeous (mine is in soft sage, but the pastel pink and lilac are on my wish list!), and the design feels both modern and timeless. It’s the kind of tumbler you want to carry everywhere. Cold-All-Day Power: Stanley wasn’t kidding with the insulation—this thing keeps drinks cold for HOURS. I fill it in the morning with ice and water, and by dinner time, it's still chilly. Perfect for hot days, long commutes, gym sessions, or just lounging at your desk. Hydration Motivation: Thanks to its large size (and handy straw!), I’m finally hitting my daily water goals without even thinking about it. The wide mouth makes it easy to refill, and having it nearby just makes drinking water so convenient—it’s like hydration on autopilot. Durability & Functionality: It fits perfectly in car cup holders, the lid is super secure (no leaks!), and the handle makes it easy to carry around. It's sturdy enough for daily use but light enough to tote without hassle. Overall: This Stanley Tumbler is more than just a pretty face—it’s a hydration hero. If you're trying to drink more water, stay cool, and carry something cute and reliable, this is your new go-to."
+    },
+    {
+      "ratingScore": 5,
+      "reviewTitle": "Love it!",
+      "reviewDescription": "⭐️⭐️⭐️⭐️⭐️ Absolutely Love It – Stylish, Durable, and High Quality! The Stanley Quencher H2.0 FlowState 30 OZ Stainless Steel Tumbler is everything I hoped for and more. From the moment I unboxed it, I could tell this was a premium-quality product. The build is incredibly sturdy, and you can feel the durability just by holding it. Stanley is a name that speaks for itself, and I’m more than happy to bet on its quality – they’ve never disappointed. The finish is flawless – smooth, sleek, and with just the right amount of shine. It looks and feels high-end. The style is unmatched – it’s modern, minimalist, and trendy, perfect for taking on the go or placing on a desk. I’ve received so many compliments already! Functionality-wise, it keeps drinks cold for hours, and the FlowState lid with the rotating cover is genius – perfect for sipping, straw use, or closing it entirely. The handle is super comfortable, and the 30 oz size is just right for staying hydrated throughout the day without constant refills. Overall, I couldn’t be happier with this purchase. If you’re looking for something that combines function with fashion, the Stanley Quencher H2.0 is the way to go. It’s worth every penny!"
+    },
+    {
+      "ratingScore": 5,
+      "reviewTitle": "A Must-Have Tumbler for Daily Use!",
+      "reviewDescription": "I’ve been using this Stanley tumbler daily, and it’s truly lived up to the hype. The first thing I love is the size — it holds a lot of water, so I don’t have to refill it constantly. The handle is ergonomic and makes it super easy to carry, especially when I’m on the go. The double-wall insulation really works — my drinks stay cold for hours, even when I leave it in a warm room. I also appreciate the fact that it fits perfectly into my car’s cup holder despite its large size. The straw lid is sturdy, leak-resistant, and easy to clean, which is a big plus. The matte finish looks sleek and stylish, and the quality feels premium. Overall, it’s a game-changer for anyone who wants to stay hydrated in style. I can definitely see why it’s so popular!"
+    },
+    {
+      "ratingScore": 5,
+      "reviewTitle": "Absolutely stunning! - Highly recommend",
+      "reviewDescription": "I am absolutely thrilled with my Stanley IceFlow Stainless Steel Tumbler in the gorgeous Rose Quartz color! 💕 It’s everything I wanted in a reusable water bottle and more. First off, the vacuum insulation is incredible. It truly keeps my drinks cold for 12 hours and iced for up to 2 days as promised. Whether I'm at home, in the car, or on the go, my water stays refreshingly cold no matter how hot the day gets. The flip straw design is a game-changer—so convenient and completely leak-resistant. I’ve tossed this tumbler into my bag, and not a single drop spilled! The straw makes it easy to sip while driving or working, making it my go-to hydration companion. At 30 oz, the size is perfect for staying hydrated throughout the day without constant refills, and the sturdy stainless steel construction ensures durability. Plus, it’s dishwasher safe, which makes cleaning a breeze. The Rose Quartz finish is absolutely stunning—elegant and modern, it adds a touch of style to my day. It’s functional, beautiful, and eco-friendly, helping me cut down on single-use cups. I highly recommend the Stanley IceFlow Tumbler to anyone looking for a reliable, stylish, and well-made reusable cup. It’s worth every penny! 🌟"
+    },
+    {
+      "ratingScore": 4,
+      "reviewTitle": "Not leak proof unfortunately",
+      "reviewDescription": "Thank God i bought while it was on sale. Otherwise i would’ve been very disappointed. The cup is beautiful no complaints there. It also seems to be nicely insulated ( I’ve only just got it) If you buy this just know that it’s not leak proof. For the price it is I expected it to be. I’ll come back after using it for awhile"
+    },
+    {
+      "ratingScore": 5,
+      "reviewTitle": "Happy wife, happy life!",
+      "reviewDescription": "My wife ADORES this stanley. Color and all! I can confidently say it lives up to the hype. The first thing I noticed was how sturdy it feels—it's not flimsy like some cheaper tumblers I've used in the past. The handle is a game-changer, especially for someone like me who’s always on the go. One of my favorite things about it is how well it keeps my drinks cold. I fill it with ice water in the morning, and by the end of the day, there’s still ice left. It’s also great for coffee, keeping it hot for hours without making the outside too warm to hold. The straw and lid design are well thought out—no annoying leaks, and it’s super easy to clean. I was a little hesitant about the size at first, but now I love it because I don’t have to constantly refill it. It also fits perfectly in my car’s cup holder, which is a huge plus. If you’re on the fence about getting one, I’d say go for it. It’s a little pricey, but considering how often I use it, I’d say it’s worth every penny."
+    },
+    {
+      "ratingScore": 4,
+      "reviewTitle": "Happy With Stanley Cup",
+      "reviewDescription": "Is anyone else finding the tops hard to remove? This one & another one are very hard to get the cap screwed off. Pro - keeps water cold for 24 hours. Holds a large amount of water as well."
+    },
+    {
+      "ratingScore": 4,
+      "reviewTitle": "Yes, It’s All Over TikTok—But It’s Also Actually Amazing",
+      "reviewDescription": "Let’s be honest: I bought this because it’s everywhere. Instagram, TikTok, your coworker’s desk, your cousin’s wedding registry—Stanley’s Quencher H2.0 is basically the Beyoncé of tumblers right now. But here’s the thing: it’s not just hype. It’s legit. 🔥 Why Everyone’s Obsessed (and Why You Might Be Too): Holds a ton of water (40 oz!) so I’m finally hitting my hydration goals without 12 trips to the sink. Keeps drinks cold for HOURS. Like, “left it in a hot car and still had ice” kind of cold. Fits in cup holders. Yes, even though it’s massive. Stanley engineered this thing like a hydration spaceship. The handle is a game-changer. I didn’t know I needed a handle until I had one. Now I judge every other bottle for not having one. Dishwasher safe. Enough said. 💡 Bonus Perks: The straw is reusable and sturdy (no more soggy paper straws). It’s surprisingly lightweight for its size. Comes in a rainbow of colors, so you can match your vibe—or your outfit. 🎯 Final Thoughts: Yes, it’s trending. Yes, it’s everywhere. But it’s also worth it. Whether you’re a gym-goer, a desk dweller, a road tripper, or just someone who forgets to drink water until 4 p.m.—this tumbler is your new best friend. And hey, if you’re going to follow a trend, at least follow one that keeps you hydrated."
+    }]
+
+
+
+
+
+  // CONTROLS FOR HOW THE DATA LOOKS AND SUCH
+
+  let output = "";
+ 
+  let name = ["Eliza Duke", "Jaden Harvey" , "Arron Kent","Ivy Kirk" , "Huda Nolan" , "Mia Lee" , "Mohammad Roberson" ,"Alexandria Maxwell" , "Issac Pearce", "Yasmin Wang"]
+  let i = 0;
+  jsonData.forEach(item => {
+    let ratingValue = item.ratingScore*20;
+    output += `
+        <div class="review">
+         
+         <h3> <p> ${name[i]}</p> <br>
+         <div class="ratings">
+            <div class="ratings-val" style="width: ${(ratingValue)}% ;"></div><!-- End .ratings-val -->
+          </div><!-- End .ratings -->   ${item.reviewTitle}</h3>
+          <p id="reviewdes">${item.reviewDescription}</p>
+        </div>
+      `;
+      i++;
+    });
+    
+    document.getElementById("outputerr").innerHTML = output;
+
+   
+    
+
+    const clickText1 = document.getElementById("pro1");
+    const clickText2 = document.getElementById("pro2");
+    const clickText3 = document.getElementById("pro3");
+    const clickText4 = document.getElementById("con1");
+    const clickText5 = document.getElementById("con2");
+    const clickText6 = document.getElementById("con3");
+   
+      
+      function highlight_review_one() {
+        const allReviews = document.querySelectorAll('.review');
+
+        allReviews.forEach(el => {
+          if (el.innerText.includes("ice")) {
+            el.style.backgroundColor = "yellow";
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          else{
+            el.style.backgroundColor = "white";
+          }
+        })
+      }
+
+      function highlight_review_two() {
+        const allReviews = document.querySelectorAll('.review');
+
+        allReviews.forEach(el => {
+          if (el.innerText.includes("fits")) {
+            el.style.backgroundColor = "yellow";
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          else{
+            el.style.backgroundColor = "white";
+          }
+        })
+      }
+
+      function highlight_review_three() {
+        const allReviews = document.querySelectorAll('.review');
+
+        allReviews.forEach(el => {
+          if (el.innerText.includes("easy")) {
+            el.style.backgroundColor = "yellow";
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          else{
+            el.style.backgroundColor = "white";
+          }
+        })
+      }
+
+      function highlight_review_four() {
+        const allReviews = document.querySelectorAll('.review');
+
+        allReviews.forEach(el => {
+          if (el.innerText.includes("leak-proof")) {
+            el.style.backgroundColor = "yellow";
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          else{
+            el.style.backgroundColor = "white";
+          }
+        })
+      }
+
+      function highlight_review_five() {
+        const allReviews = document.querySelectorAll('.review');
+
+        allReviews.forEach(el => {
+          if (el.innerText.includes("remove")) {
+            el.style.backgroundColor = "yellow";
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          else{
+            el.style.backgroundColor = "white";
+          }
+        })
+      }
+
+    
+
+      function highlight_review_six() {
+        const allReviews = document.querySelectorAll('.review');
+
+        allReviews.forEach(el => {
+          if (el.innerText.includes("pricey")) {
+            el.style.backgroundColor = "yellow";
+            el.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          else{
+            el.style.backgroundColor = "white";
+          }
+        })
+      }
+     
+      clickText1.addEventListener('click', highlight_review_one);
+      clickText2.addEventListener('click', highlight_review_two);
+      clickText3.addEventListener('click', highlight_review_three);
+      clickText4.addEventListener('click', highlight_review_four);
+      clickText5.addEventListener('click', highlight_review_five);
+      clickText6.addEventListener('click', highlight_review_six);
+
+
+//end of what was working!!
+
+
+
+                                                                                                                                                                                                                                                      
+//TESTING OPEN AI
+
+// async function analyzeReviews() {
+//   const reviewText = reviews.map(r => r.reviewDescription).join("\n");
+
+//   const response = await fetch("https://api.openai.com/v1/chat/completions", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//       "Authorization": "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"
+//     },
+//     body: JSON.stringify({
+//       model: "gpt-4.1",
+//       messages: [
+//         {
+//           role: "system",
+//           content: "You are a helpful assistant that extracts pros and cons from Amazon product reviews."
+//         },
+//         {
+//           role: "user",
+//           content: `Here are some reviews:\n${reviewText}`
+//         }
+//       ],
+//       functions: [
+//         {
+//           name: "generate_pros_and_cons",
+//           description: "Extracts pros and cons from a list of product reviews.",
+//           parameters: {
+//             type: "object",
+//             properties: {
+//               pros: {
+//                 type: "array",
+//                 items: { type: "string" }
+//               },
+//               cons: {
+//                 type: "array",
+//                 items: { type: "string" }
+//               }
+//             },
+//             required: ["pros", "cons"]
+//           }
+//         }
+//       ],
+//       function_call: { name: "generate_pros_and_cons" }
+//     })
+//   });
+
+//   const data = await response.json();
+
+//   const result = JSON.parse(data.choices[0].message.function_call.arguments);
+
+//   document.getElementById("results").innerHTML = `
+//         <h2>Pros</h2>
+//         <ul>${result.pros.map(p => `<li>${p}</li>`).join("")}</ul>
+//         <h2>Cons</h2>
+//         <ul>${result.cons.map(c => `<li>${c}</li>`).join("")}</ul>
+//       `;
+
+// }
+
+// document.getElementById("analyze").addEventListener("click", analyzeReviews);
+
+
+
+
+
+
+
+
+}) 
+
+
+
+
+
+
+
+  
